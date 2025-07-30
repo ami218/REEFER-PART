@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalog - PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#007BFF"/>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { text-align: center; color: #007BFF; }
+  </style>
+</head>
+<body>
+  <h1>📦 แค็ตตาล็อกสินค้า - PWA</h1>
+  <p>ระบบนี้สามารถติดตั้งเป็นแอปได้! กดเมนู <strong>"Add to Home Screen"</strong> บนมือถือ</p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("✅ Service Worker Registered"))
+        .catch(err => console.error("SW error:", err));
+    }
+  </script>
+</body>
+</html>
